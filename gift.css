@@ -1,0 +1,83 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  header {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  .occasions {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 10px 0;
+  }
+  
+  .occasion {
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .occasion span {
+    font-size: 2rem;
+  }
+  
+  .occasion p {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .gift-ideas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .gift {
+    width: 200px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .gift img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .gift p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .gift:hover {
+    transform: translateY(-5px);
+  }
+  

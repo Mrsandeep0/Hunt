@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    background-image: url('C:\Users\sanja\OneDrive\Pictures\Camera Roll 1\banner.jpg'); /* Background set to your uploaded image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    /* Prevents tiling/repetition */
+    color:skyblue; /* Text color */
+    padding: 10px; /* Adds internal spacing */
+  }
+  
+  .banner h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .banner p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .shop-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color:white;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .shop-btn:hover {
+    background-color: #e64a19;
+  }
+  

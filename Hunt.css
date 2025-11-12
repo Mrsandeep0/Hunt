@@ -1,0 +1,320 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header */
+  .header {
+    position:fixed;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    z-index: 100;
+  }
+  
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF5722;
+    text-decoration: none;
+  }
+  
+  .navbar a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+  }
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 10px;
+  
+  .header-actions input {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-btn, .signin-btn, .cart {
+    background-color: #FF5722;
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+   /* .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh; /* Full viewport height *
+  /* Banner 
+  .banner {
+    display: flex;
+    text-align: center;
+    background-color: lightblue;
+    background-image: url('');
+    padding: 50px 20px;
+    margin-top: 10px;
+  }
+  
+  .banner h1 {
+    color: #6B46C1;
+    font-size: 36px;
+  }
+  
+  .banner p {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .banner .shop-btn {
+    background-color: #6B46C1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }/* Banner */
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 50vh; /* Adjust the height as needed */
+  background-image: url('banner02.jpg'); /* Set the image as background */
+  background-size: cover; /* Make the image cover the section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  color: whitesmoke; /* Text color */
+  padding: 20px;
+}
+
+.banner h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: black; /* Ensure text is visible on the image */
+}
+
+.banner p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color:olive; /* Ensure text is visible on the image */
+}
+
+.banner .shop-btn {
+  background-color: #6B46C1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+  
+  /* Categories 
+  .categories {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 10px;
+  }
+  
+  /*.category-cards {
+    display: grid;
+    padding: 50px 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  
+  .category-card {
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .category-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }*/
+  .categories {
+    display: flex;  /* Use flexbox for the main container */
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;  /* Center align items */
+    margin: 20px 0;  /* Vertical margin */
+  }
+  
+  .categories h2 {
+    margin-bottom: 20px;  /* Space below the header */
+    font-size: 1.5rem;  /* Header font size */
+    text-align: center;  /* Center the header text */
+  }
+  
+  .categories .category-container {
+    display: flex;  /* Use flexbox for horizontal layout */
+    justify-content: center;  /* Center align the categories */
+    gap: 20px;  /* Space between categories */
+    flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+  }
+  
+  .categories .category {
+    display: flex;  /* Flexbox for individual category */
+    flex-direction: row;  /* Stack image and text vertically */
+    align-items: center ;  /* Center align the items */
+    justify-self: flex-end;
+    width: 120px;  /* Fixed width for each category */
+    text-align: center;  /* Center text below images */
+    font-size: 0.9rem;  /* Smaller font size */
+  }
+  
+  .categories img {
+    width: 100px;  /* Image width */
+    height: 100px;  /* Image height */
+    object-fit: cover;  /* Ensure images are contained */
+    border-radius: 8px;  /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    margin-bottom: 8px;  /* Space below the image */
+  }
+  
+  
+  /* Product Grid 
+  .products {
+    padding: 20px;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .product-card button {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }*/
+  .products {
+    text-align: center; /* Center align the section text */
+    margin: 40px 0; /* Space around the section */
+  }
+  
+  .products h2 {
+    font-size: 2rem; /* Font size for the section header */
+    margin-bottom: 20px; /* Space below the header */
+  }
+  
+  .product-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between grid items */
+  }
+  
+  .product-card {
+    background-color: #f9f9f9; /* Light background for product cards */
+    border: 1px solid #ddd; /* Light border around cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside cards */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+  }
+  
+  .product-card img {
+    width: 100%; /* Image takes full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+  }
+  
+  .product-card h3 {
+    font-size: 1.25rem; /* Font size for product name */
+    margin: 10px 0; /* Space around product name */
+  }
+  
+  .product-card p {
+    font-size: 1rem; /* Font size for price */
+    color: #555; /* Dark gray color for the price */
+    margin: 5px 0; /* Space around price */
+  }
+  
+  .product-card button {
+    background-color: #FF5722;/* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded button corners */
+    padding: 10px 15px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color change */
+  }
+  
+  .product-card button:hover {
+    background-color: ; /* Darker blue on hover */
+  }
+  
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for smaller screens */
+    }
+  }
+  
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+  }
+  

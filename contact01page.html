@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:rgb(54, 64, 69);
+        }
+        
+        .contact-section {
+            padding: 50px;
+            background-color:whitesmoke;
+        }
+        
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-left {
+            width: 40%;
+        }
+        
+        .contact-left h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: #333;
+        }
+        
+        .contact-left p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        .social-icons {
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            margin-right: 10px;
+            font-size: 20px;
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .contact-right {
+            width: 50%;
+        }
+        
+        .contact-right h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .input-group input {
+            width: 48%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            height: 120px;
+        }
+        
+        button {
+            padding: 10px 15px;
+         
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100px;
+        }
+        
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<section class="contact-section">
+    <div class="contact-container">
+        <div class="contact-left">
+            <h3>Contact Info</h3>
+            <p>Hyderabad, India</p>
+            <p>sandeepkmokalla@gmail.com</p>
+            <p>+91 7815876166</p>
+            <p id="currentDateTime"></p> <!-- Dynamic Date & Time will be displayed here -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/sandeepkumar-mokalla-08840829a" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Mrsandeep0" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/_mrsandeep__/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://web.whatsapp.com//7815876166" target="_blank"><i class="fa-brands fa fa-whatsapp"></i></i></a>
+                <!-- Add other social media icons as needed -->
+            </div>
+        </div>
+        
+        <div class="contact-right">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    function updateDateTime() {
+        const currentDateTimeElement = document.getElementById('currentDateTime');
+        const now = new Date();
+
+        // Format the date as Day, Month Date, Year
+        const date = now.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        // Format the time as Hour:Minute AM/PM
+        const time = now.toLocaleTimeString('en-US', {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: true
+        });
+
+        currentDateTimeElement.textContent = `Date & Time: ${date}, ${time}`;
+    }
+
+    // Update the time immediately and every second
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
+
+</body>
+</html>

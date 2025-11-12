@@ -1,0 +1,54 @@
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hallo</title>
+</head>
+<body>
+    <h1>this is my frst project in js</h1>
+    <p>there is button type project then it will shows the light on and off</p>
+    <p>click the button to turn on and off the light</p>
+   
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+    
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb Toggle</title>
+</head>
+<body>
+
+    <h1>JavaScript Light Bulb Project</h1>
+    <p>Click the button to turn the light on or off.</p>
+
+    <!-- Light Bulb Image -->
+    <img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Light bulb is off" style="width:100px">
+
+    <br><br>
+
+    <!-- Buttons to Toggle Light -->
+    <button onclick="turnOn()">Turn On</button>
+    <button onclick="turnOff()">Turn Off</button>
+
+    <script>
+        function turnOn() {
+            document.getElementById('myImage').src = "https://www.w3schools.com/js/pic_bulbon.gif";
+        }
+
+        function turnOff() {
+            document.getElementById('myImage').src = "https://www.w3schools.com/js/pic_bulboff.gif";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .favorite-btn {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.favorite-btn:hover {
+  background-color: #ffcccc;
+}
+
+.favorite-btn.active {
+  background-color: #ff6666;
+  color: #fff;
+}
+
+    </style>
+</body>
+<body>
+    <section class="gift-ideas">
+        <div class="gift" data-id="1">
+          <a href="https://example.com/date-night-ideas" target="_blank">
+            <img src="https://via.placeholder.com/150" alt="Date Night Ideas">
+            <p>Date Night Ideas</p>
+          </a>
+          <button class="favorite-btn">❤️ Add to Favorites</button>
+        </div>
+        <div class="gift" data-id="2">
+          <a href="https://example.com/reasons-i-love-you" target="_blank">
+            <img src="https://via.placeholder.com/150" alt="'Reasons I Love You' Gifts">
+            <p>"Reasons I Love You" Gifts</p>
+          </a>
+          <button class="favorite-btn">❤️ Add to Favorites</button>
+        </div>
+        <div class="gift" data-id="3">
+          <a href="https://example.com/forever-flowers" target="_blank">
+            <img src="https://via.placeholder.com/150" alt="Forever Flowers">
+            <p>Forever Flowers</p>
+          </a>
+          <button class="favorite-btn">❤️ Add to Favorites</button>
+        </div>
+      </section>     
+</body>
+<script>
+    // Initialize favorites array from localStorage (if it exists)
+let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+// Function to update the favorite button's text
+function updateFavoriteButtons() {
+  const favoriteButtons = document.querySelectorAll(".favorite-btn");
+  favoriteButtons.forEach((button) => {
+    const productId = button.closest(".gift").dataset.id;
+    if (favorites.includes(productId)) {
+      button.textContent = "💔 Remove from Favorites";
+    } else {
+      button.textContent = "❤️ Add to Favorites";
+    }
+  });
+}
+
+// Add event listeners to all favorite buttons
+document.querySelectorAll(".favorite-btn").forEach((button) => {
+  button.addEventListener("click", function () {
+    const giftElement = this.closest(".gift");
+    const productId = giftElement.dataset.id;
+
+    // Check if the product is already in favorites
+    if (favorites.includes(productId)) {
+      // Remove from favorites
+      favorites = favorites.filter((id) => id !== productId);
+    } else {
+      // Add to favorites
+      favorites.push(productId);
+    }
+
+    // Save updated favorites to localStorage
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+
+    // Update button text
+    updateFavoriteButtons();
+  });
+});
+
+// Initial button text setup
+updateFavoriteButtons();
+
+</script>
+</html>
